@@ -1,0 +1,9 @@
+# TheRescueMission
+
+In times of disasters, it is very difficult for people looking to be rescued to signal their presence or location even if they have a working mobile phone since their may be no cellular signal and since even emergency calls require the presence of at least one working mobile tower nearby, often no contact is possible.
+
+We propose an emergency signalling system using HC-12 transceivers that can be connected to an Arduino or Raspberry Pi that can connect two devices within a radius of 1.8 km (Bluetooth and Wi-Fi typically have a range of 100-200 m). A trapped survivor during an earthquake, avalanche, flood or any other disaster where they may be a cellular network outage can send an emergency signal along with the GPS coordinates (no internet or cellular signal required, just a satellite GPS signal that may take 1-2 minutes to be received by a mobile phone) using these transmitters and any rescuer nearby can get the location and start looking out for survivors around those coordinates (At both ends, the transmitter/receiver connected to an Arduino will be connected to a mobile phone via bluetooth). We also propose to make an app for the rescuer/rescue team that can obtain these pulses of emergency signals and start rescuing them and for the survivors that can trigger the signal via a single button.
+
+SETUP
+
+The two endpoints (rescuee and rescuer) will have an Arduino that will be connected to an HC-05 or HC-06 serial bluetooth module and an HC-12 transceiver. This Arduino will connect to an Android phone via the Bluetooth module and will send/receive signals to/from the other Arduino via the transceiver. The Arduino code to be programmed onto the board is present in the 'arduino' folder and the app(s) that will connect to the Arduino is present in the 'android' folder.
